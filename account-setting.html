@@ -9,7 +9,6 @@
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
       <!-- Typography CSS -->
       <link rel="stylesheet" href="css/typography.css">
       <!-- Style CSS -->
@@ -17,7 +16,7 @@
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
    </head>
-   <body>
+   <body class="sidebar-main-active right-column-fixed">
       <!-- loader Start -->
       <div id="loading">
          <div id="loading-center">
@@ -57,13 +56,13 @@
                           <li><a href="wishlist.html"><i class="ri-heart-line"></i>wishlist</a></li>
                         </ul>
                      </li>
-                     <li class="active active-menu">
-                        <a href="#admin" class="iq-waves-effect" data-toggle="collapse" aria-expanded="true"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="admin" class="iq-submenu collapse show" data-parent="#iq-sidebar-toggle">
-                           <li><a href="admin-dashboard.html"><i class="las la-house-damage"></i>Bảng điều khiển</a></li>
-                           <li><a href="admin-category.html"><i class="ri-function-line"></i>Danh sách danh mục</a></li>
-                           <li class="active"><a href="admin-author.html"><i class="ri-book-line"></i>Tác giả</a></li>
-                           <li><a href="admin-books.html"><i class="ri-file-pdf-line"></i>Sách</a></li>
+                     <li>
+                        <a href="#admin" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="admin" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="admin-dashboard.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                           <li><a href="admin-category.html"><i class="ri-list-check-2"></i>Category Lists</a></li>
+                           <li><a href="admin-author.html"><i class="ri-file-user-line"></i>Author</a></li>
+                           <li><a href="admin-books.html"><i class="ri-book-2-line"></i>Books</a></li>
                         </ul>
                      </li>
                      <li>
@@ -172,7 +171,6 @@
                                  <li><a href="pages-error.html"><i class="ri-error-warning-line"></i>Error 404</a></li>
                                  <li><a href="pages-error-500.html"><i class="ri-error-warning-line"></i>Error 500</a></li>
                                  <li><a href="pages-pricing.html"><i class="ri-price-tag-line"></i>Pricing</a></li>
-                                 <li><a href="pages-pricing-one.html"><i class="ri-price-tag-2-line"></i>Pricing 1</a></li>
                                  <li><a href="pages-maintenance.html"><i class="ri-archive-line"></i>Maintenance</a></li>
                                  <li><a href="pages-comingsoon.html"><i class="ri-mastercard-line"></i>Coming Soon</a></li>
                                  <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>
@@ -233,12 +231,12 @@
                      </div>
                   </div>
                   <div class="navbar-breadcrumb">
-                     <h4 class="mb-0 text-dark">Sách</h4>
-                     <p class="mb-0"><span class="text-primary">Xin chào </span>Chào mừng bạn trở lại hồ sơ của bạn</p>
+                     <h4 class="mb-0 text-dark">Dashboard</h4>
+                     <p class="mb-0"><span class="text-primary">Hi there,</span> Welcome back Your profile</p>
                   </div>
                   <div class="iq-search-bar">
                      <form action="#" class="searchbox">
-                        <input type="text" class="text search-input" placeholder="Tìm kiếm...">
+                        <input type="text" class="text search-input" placeholder="Search Here...">
                         <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                      </form>
                   </div>
@@ -256,7 +254,138 @@
                               <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                            </form>
                         </li>
-
+                        <li class="nav-item nav-icon">
+                           <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
+                           <i class="ri-notification-2-fill"></i>
+                           <span class="bg-primary dots"></span>
+                           </a>
+                           <div class="iq-sub-dropdown">
+                              <div class="iq-card shadow-none m-0">
+                                 <div class="iq-card-body p-0">
+                                    <div class="bg-primary p-3">
+                                       <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1">4</small></h5>
+                                    </div>
+                                    <a href="#" class="iq-sub-card" >
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Emma Watson Barry</h6>
+                                             <small class="float-right font-size-12">Just Now</small>
+                                             <p class="mb-0">95 MB</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card" >
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">New customer is join</h6>
+                                             <small class="float-right font-size-12">5 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card" >
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Two customer is left</h6>
+                                             <small class="float-right font-size-12">2 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card" >
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">New Mail from Fenny</h6>
+                                             <small class="float-right font-size-12">3 days ago</small>
+                                             <p class="mb-0">Cyst Barry</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="nav-item nav-icon dropdown">
+                           <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
+                           <i class="fa fa-envelope" aria-hidden="true"></i>
+                           <span class="bg-primary count-mail"></span>
+                           </a>
+                           <div class="iq-sub-dropdown">
+                              <div class="iq-card shadow-none m-0">
+                                 <div class="iq-card-body p-0 ">
+                                    <div class="bg-primary p-3">
+                                       <h5 class="mb-0 text-white">All Messages<small class="badge  badge-light float-right pt-1">5</small></h5>
+                                    </div>
+                                    <a href="#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Barry Emma Watson</h6>
+                                             <small class="float-left font-size-12">13 Jun</small>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Lorem Ipsum Watson</h6>
+                                             <small class="float-left font-size-12">20 Apr</small>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Why do we use it?</h6>
+                                             <small class="float-left font-size-12">30 Jun</small>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Variations Passages</h6>
+                                             <small class="float-left font-size-12">12 Sep</small>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="#" class="iq-sub-card">
+                                       <div class="media align-items-center">
+                                          <div class="">
+                                             <img class="avatar-40 rounded" src="images/user/05.jpg" alt="">
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Lorem Ipsum generators</h6>
+                                             <small class="float-left font-size-12">5 Dec</small>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
                         </li>
                         <li class="nav-item nav-icon dropdown">
                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
@@ -397,80 +526,101 @@
             </div>
          </div>
          <!-- TOP Nav Bar END -->
+         
          <!-- Page Content  -->
          <div id="content-page" class="content-page">
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-sm-12">
+                  <div class="col-lg-6">
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Thêm sách</h4>
+                              <h4 class="card-title">Account Setting</h4>
                            </div>
                         </div>
                         <div class="iq-card-body">
-                           <form action="admin-books.html">
-                              <div class="form-group">
-                                 <label>Tên sách:</label>
-                                 <input type="text" class="form-control">
-                              </div>
-                              <div class="form-group">
-                                 <label>Danh mục sách:</label>
-                                 <select class="form-control" id="exampleFormControlSelect1">
-                                    <option selected="" disabled="">Danh mục sách</option>
-                                    <option>General Books</option>
-                                    <option>History Books</option>
-                                    <option>Horror Story</option>
-                                    <option>Arts Books</option>
-                                    <option>Film & Photography</option>
-                                    <option>Business & Economics</option>
-                                    <option>Comics & Mangas</option>
-                                    <option>Computers & Internet</option>
-                                    <option> Sports</option>
-                                    <option> Travel & Tourism</option>
-                                 </select>
-                              </div>
-                              <div class="form-group">
-                                 <label>Tác giả sách:</label>
-                                 <select class="form-control" id="exampleFormControlSelect2">
-                                    <option selected="" disabled="">Tác giả sách</option>
-                                    <option>Jhone Steben</option>
-                                    <option>John Klok</option>
-                                    <option>Ichae Semos</option>
-                                    <option>Jules Boutin</option>
-                                    <option>Kusti Franti</option>
-                                    <option>David King</option>
-                                    <option>Henry Jurk</option>
-                                    <option>Attilio Marzi</option>
-                                    <option>Argele Intili</option>
-                                    <option>Attilio Marzi</option>
-                                 </select>
-                              </div>
-                              <div class="form-group">
-                                 <label>Hình ảnh:</label>
-                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" accept="image/png, image/jpeg">
-                                    <label class="custom-file-label">Choose file</label>
+                           <div class="acc-edit">
+                              <form>
+                                 <div class="form-group">
+                                    <label for="uname">User Name:</label>
+                                    <input type="text" class="form-control" id="uname" value="Barry@01">
                                  </div>
-                              </div>
-                              <div class="form-group" style="display:none">
-                                 <label>Sách pdf:</label>
-                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" accept="application/pdf, application/vnd.ms-excel">
-                                    <label class="custom-file-label">Chọn file</label>
+                                 <div class="form-group">
+                                    <label for="email">Email Id:</label>
+                                    <input type="email" class="form-control" id="email" value="Barryjohn@gmail.com">
                                  </div>
-                              </div>
-                              <div class="form-group">
-                                 <label>Giá sách:</label>
-                                 <input type="text" class="form-control">
-                              </div>
-                              <div class="form-group">
-                                 <label>Nội dung:</label>
-                                 <textarea class="form-control" rows="4"></textarea>
-                              </div>
-                              <button type="submit" class="btn btn-primary">Gửi</button>
-                              <button type="reset" class="btn btn-danger">Trở lại</button>
-                           </form>
+                                 <div class="form-group">
+                                    <label for="altemail">Alternate Email:</label>
+                                    <input type="email" class="form-control" id="altemail" value="designtheme@gmail.com">
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="d-block">Language Known:</label>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="english" checked="">
+                                       <label class="custom-control-label" for="english">English</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="french" checked="">
+                                       <label class="custom-control-label" for="french">French</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="hindi">
+                                       <label class="custom-control-label" for="hindi">Hindi</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="spanish" checked="">
+                                       <label class="custom-control-label" for="spanish">Spanish</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="arabic">
+                                       <label class="custom-control-label" for="arabic">Arabic</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" class="custom-control-input" id="italian">
+                                       <label class="custom-control-label" for="italian">Italian</label>
+                                    </div>
+                                 </div>
+                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                 <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Social Media</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <div class="acc-edit">
+                              <form>
+                                 <div class="form-group">
+                                    <label for="facebook">Facebook:</label>
+                                    <input type="text" class="form-control" id="facebook" value="www.facebook.com">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="twitter">Twitter:</label>
+                                    <input type="text" class="form-control" id="twitter" value="www.twitter.com">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="google">Google +:</label>
+                                    <input type="text" class="form-control" id="google" value="www.google.com">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="instagram">Instagram:</label>
+                                    <input type="text" class="form-control" id="instagram" value="www.instagram.com">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="youtube">You Tube:</label>
+                                    <input type="text" class="form-control" id="youtube" value="www.youtube.com">
+                                 </div>
+                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                 <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                              </form>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -479,7 +629,7 @@
          </div>
       </div>
       <!-- Wrapper END -->
-      <!-- Footer -->
+       <!-- Footer -->
       <footer class="iq-footer">
          <div class="container-fluid">
             <div class="row">
@@ -489,21 +639,50 @@
                      <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
                   </ul>
                </div>
-               
+               <div class="col-lg-6 text-right">
+                  Copyright 2020 <a href="#">Booksto</a> All Rights Reserved.
+               </div>
             </div>
          </div>
       </footer>
       <!-- Footer END -->
       <!-- color-customizer -->
-     
-      <!-- color-customizer END -->
+       <div class="iq-colorbox color-fix">
+           <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
+           <div class="clearfix color-picker">
+               <h3 class="iq-font-black">Booksto Awesome Color</h3>
+               <p>This color combo available inside whole template. You can change on your wish, Even you can create your own with limitless possibilities! </p>
+               <ul class="iq-colorselect clearfix">
+                   <li class="color-1 iq-colormark" data-style="color-1"></li>
+                   <li class="color-2" data-style="iq-color-2"></li>
+                   <li class="color-3" data-style="iq-color-3"></li>
+                   <li class="color-4" data-style="iq-color-4"></li>
+                   <li class="color-5" data-style="iq-color-5"></li>
+                   <li class="color-6" data-style="iq-color-6"></li>
+                   <li class="color-7" data-style="iq-color-7"></li>
+                   <li class="color-8" data-style="iq-color-8"></li>
+                   <li class="color-9" data-style="iq-color-9"></li>
+                   <li class="color-10" data-style="iq-color-10"></li>
+                   <li class="color-11" data-style="iq-color-11"></li>
+                   <li class="color-12" data-style="iq-color-12"></li>
+                   <li class="color-13" data-style="iq-color-13"></li>
+                   <li class="color-14" data-style="iq-color-14"></li>
+                   <li class="color-15" data-style="iq-color-15"></li>
+                   <li class="color-16" data-style="iq-color-16"></li>
+                   <li class="color-17" data-style="iq-color-17"></li>
+                   <li class="color-18" data-style="iq-color-18"></li>
+                   <li class="color-19" data-style="iq-color-19"></li>
+                   <li class="color-20" data-style="iq-color-20"></li>
+               </ul>
+               <a target="_blank" class="btn btn-primary d-block mt-3" href="">Purchase Now</a>
+           </div>
+       </div>
+       <!-- color-customizer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.dataTables.min.js"></script>
-      <script src="js/dataTables.bootstrap4.min.js"></script>
       <!-- Appear JavaScript -->
       <script src="js/jquery.appear.js"></script>
       <!-- Countdown JavaScript -->
@@ -539,14 +718,6 @@
       <script src="js/maps.js"></script>
       <!-- am worldLow JavaScript -->
       <script src="js/worldLow.js"></script>
-      <!-- Raphael-min JavaScript -->
-      <script src="js/raphael-min.js"></script>
-      <!-- Morris JavaScript -->
-      <script src="js/morris.js"></script>
-      <!-- Morris min JavaScript -->
-      <script src="js/morris.min.js"></script>
-      <!-- Flatpicker Js -->
-      <script src="js/flatpickr.js"></script>
       <!-- Style Customizer -->
       <script src="js/style-customizer.js"></script>
       <!-- Chart Custom JavaScript -->
