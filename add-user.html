@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
+
    </head>
    <body>
       <!-- loader Start -->
@@ -250,46 +251,60 @@
                            </div>
                         </div>
                         <div class="iq-card-body">
-                           <form action="admin-category.html">
+                           <form id="add-user"method="post" action="/api/users/add">
                               <div class="form-group">
-                                 <label>Hình ảnh</label>
-                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" accept="image/png, image/jpeg">
-                                    <label class="custom-file-label">Chọn tệp</label>
+                                 <label>Chọn hình ảnh</label>
+                                 <input required name = "image" type="text" >   
                                  </div>
                               </div>
+                            
+                                 
+                                 
+                                  
                               <div class="form-group">
-                                 <label>ID</label>
-                                 <input
+                                 <label>Tên đăng nhập</label>
+                                 <input required name = "username"
                                   class="form-control" rows="4"></input>
                               </div>
                               <div class="form-group">
                                  <label>Tên người dùng</label>
-                                 <input
+                                 <input required name= "name"
+                                  class="form-control" rows="4"></input>
+                              </div>
+                              <div class="form-group">
+                                 <label>Ngày tháng năm sinh</label>
+                                 <input required name = "birthday"
                                   class="form-control" rows="4"></input>
                               </div>
                               <div class="form-group">
                                  <label>SĐT</label>
-                                 <input
+                                 <input required name = "phone"
                                   class="form-control" rows="4"></input>
                               </div>
                               <div class="form-group">
                                  <label>Email</label>
-                                 <input
+                                 <input required name = "email"
                                   class="form-control" rows="4"></input>
                               </div>
 
                               <div class="form-group">
                                  <label>Địa chỉ:</label>
-                                 <input type="text" class="form-control">
+                                 <input required name = "address" 
+                                 class="form-control" rows="4"></input>
+
                               </div>
                               <div class="form-group">
-                                 <label>Password</label>
-                                 <input
+                                 <label>Mật khẩu</label>
+                                 <input required name = "password" type="password" 
+                                  class="form-control" rows="4"></input>
+                              </div>
+                              <div class="form-group">
+                                 <label>Vai trò</label>
+                                 <input required name = "role"  
                                   class="form-control" rows="4"></input>
                               </div>
                               <button type="submit" class="btn btn-primary">Gửi</button>
-                              <button  type="reset" class="btn btn-danger"><a href="admin-author.html">Trở lại</a></button>
+                              <button type="button" onclick="window.location.href='admin-author.html'" class="btn btn-danger">Trở lại</button>
                            </form>
                         </div>
                      </div>
@@ -362,5 +377,6 @@
       <script src="js/chart-custom.js"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js"></script>
+      <script src="js/user/create.js"></script>
    </body>
 </html>
