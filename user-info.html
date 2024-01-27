@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>User Info Page</h1>
+
+    <!-- Phần tử để chứa danh sách người dùng -->
+    <div id="user-list"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Gọi API để lấy danh sách người dùng
+            $.ajax({
+                url: "http://localhost:8080/users",
+                method: "GET",
+                success: function(result) {
+                    if (result.length > 0) {
+                        // Hiển thị danh sách người dùng
+                        displayUserList(result);
+                    } else {
+                        console.log("Không có người dùng.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error: " + xhr.status + ": " + xhr.statusText, error);
+                }
+            });
+        });
+
+        function displayUserList(userList) {
+            // Hiển thị danh sách người dùng trên trang HTML
+            console.log(userList);
+
+            // Ví dụ: Hiển thị thông tin trong phần tử có id là "user-list"
+            var userContainer = $("#user-list");
+
+            // Xóa nội dung cũ của userContainer (nếu có)
+            userContainer.empty();
+
+            // Lặp qua danh sách người dùng và hiển thị thông tin
+            userList.forEach(function(userData) {
+                userContainer.append(`
+                    <div class="user-item">
+                        <p>ID: ${userData.id}</p>
+                        <p>Username: ${userData.username}</p>
+                        <p>Email: ${userData.email}</p>
+                        <!-- Thêm các thông tin khác -->
+                    </div>
+                `);
+            });
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>User Info Page</h1>
+
+    <!-- Phần tử để chứa danh sách người dùng -->
+    <div id="user-list"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Gọi API để lấy danh sách người dùng
+            $.ajax({
+                url: "http://localhost:8080/users",
+                method: "GET",
+                success: function(result) {
+                    if (result.length > 0) {
+                        // Hiển thị danh sách người dùng
+                        displayUserList(result);
+                    } else {
+                        console.log("Không có người dùng.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error: " + xhr.status + ": " + xhr.statusText, error);
+                }
+            });
+        });
+
+        function displayUserList(userList) {
+            // Hiển thị danh sách người dùng trên trang HTML
+            console.log(userList);
+
+            // Ví dụ: Hiển thị thông tin trong phần tử có id là "user-list"
+            var userContainer = $("#user-list");
+
+            // Xóa nội dung cũ của userContainer (nếu có)
+            userContainer.empty();
+
+            // Lặp qua danh sách người dùng và hiển thị thông tin
+            userList.forEach(function(userData) {
+                userContainer.append(`
+                    <div class="user-item">
+                        <p>ID: ${userData.id}</p>
+                        <p>Username: ${userData.username}</p>
+                        <p>Email: ${userData.email}</p>
+                        <p>Phone: ${userData.phone}</p>
+
+                        <!-- Thêm các thông tin khác -->
+                    </div>
+                `);
+            });
+        }
+    </script>
+</body>
+</html>
