@@ -24,22 +24,8 @@ $("#add-user").submit(function(e) {
         
         success:function(result) {
             alert("Thêm người dùng thành công!");
-            window.location.href = "http://127.0.0.1:5500/user-info.html?id=" + result.id;
-            $.ajax({
-                url: "http://localhost:8080/users",
-                method: "GET",
-                success: function(result) {
-                    if (result.length > 0) {
-                        // Hiển thị thông tin của người dùng đầu tiên (hoặc theo ý của bạn)
-                        displayUserData(result[0]);
-                    } else {
-                        console.log("Không có người dùng.");
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.log("Error: " + xhr.status + ": " + xhr.statusText, error);
-                }
-            });
+            window.location.href = "http://127.0.0.1:5500/admin-user.html" ;
+           
         },
         error:function(xhr, status, error) {
             console.log("Error: " + xhr.status + ": " + xhr.statusText,error);
